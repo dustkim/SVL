@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f6d41d7604570ff1ff9b122f2ec7ef00&libraries=services"></script>
+    <!-- <script type="module" src="./javascript2.js"></script> -->
+    <script src="../../js/javascript.js"></script>
+</head>
+<body>
+    <div id="container">
+        <nav id="navPc" class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/map">다국어 지도조회</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarColor03">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a id="menu"class="nav-link active" href="#">메뉴</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="food"class="nav-link category" href="#">음식점</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="lodging" class="nav-link category" href="#">숙소</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="heritage" class="nav-link category" href="#">문화유산</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="park" class="nav-link category" href="#">공원</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">번역설정</a>
+                    <div class="dropdown-menu">
+                      <a id="translate" class="dropdown-item" href="#">번역</a>
+                      <a id="language" class="dropdown-item" href="#">언어</a>
+                  </li>
+                  <li id="nav_logout" class="nav-item">
+                    <!-- 여기에 모바일 로그아웃 버튼 -->
+                    <form id="mobileLogout" action="/user/redirect" method="POST">
+                      <a id="a_logout" class="nav-link" href="#" type="submit" onclick="mobileLogout()">로그아웃</a>
+                    </form>
+                  </li>
+                </ul>
+                <div id="navpc" class="d-flex navpc">
+                  <div>
+                    <input id="search_pc" class="form-control me-sm-2" type="search" placeholder="선택한 구 내에서 찾을 명칭">
+                  </div>
+                  <div>
+                    <button id="search_button_pc" class="btn btn-secondary my-2 my-sm-0" type="button">검색</button>
+                  </div>
+                </div>
+                <!-- 여기에 PC 로그아웃 버튼 -->
+                <form action="/user/redirect" method="POST">
+                  <div id="logout">
+                    <button type="submit" id="logoutButton"><img src="../../image/logout.png" alt="로그아웃"></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+        </nav>
+        <nav id="navMobile" class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+          <div class="container-fluid">
+            <div class="d-flex mobile">
+              <div>
+                <input id="search_mobile" class="form-control me-sm-2" type="search" placeholder="선택한 구 내에서 찾을 명칭">
+              </div>
+              <div>
+                <button id="search_button_mobile" class="btn btn-secondary my-2 my-sm-0" type="button">검색</button>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <section id="showIntro" class="showIntro">
+            <div id="map">
+                <div id="menuList" class="card border-secondary mb-3">
+                    <div class="card-header" style="text-align: center;">조회 목록</div>
+                    <ul id="list" class="list-group"></ul>
+                </div>
+                <div id="detailInfo"class="intro">
+                    <div id="subDetailInfo" class="card border-secondary mb-3">
+                      <div class="card-header">Header</div>
+                        <div class="card-body">
+                          <h4 class="card-title">Secondary card title</h4>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="translateInfo" class="card border-secondary mb-3">
+                  <div class="card-header" style="text-align: center;">번역 언어 목록</div>
+                    <ul id="translateList" class="list-group"></ul>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

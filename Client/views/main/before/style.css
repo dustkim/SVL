@@ -1,0 +1,133 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.sidebar {
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    overflow: auto;
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+}
+
+.map {
+    width: 70%;
+    height: 100%;
+    position: relative;
+}
+
+.category {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 5px 0 5px 0;
+}
+
+.menu {
+    width: 100px; /* 버튼 너비 설정 */
+    height: 40px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    margin: 0 5px 0 5px;
+    cursor: pointer;
+}
+
+.other {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.translate, .setting, .close, .logout {
+    border: 2px solid gray;
+    border-radius: 5px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    width: 5rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.info {
+    width: 100%;
+    margin: 5px 0 5px 0;
+    height: 81%;
+    position: relative;
+    text-align: center;
+}
+
+.menuList {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.detailInfo {
+    text-align: left;
+    width: 97%;
+    height: 100%;
+    display: none;
+    overflow: scroll;
+    padding: 0 0 0 10px;
+}
+
+#search {
+    width: 95%;
+    height: 25px;
+    margin: 10px 0 10px 0;
+}
+
+.detailInfo > h3 {
+    margin-top: 10px;
+}
+
+.detailInfo > p {
+    margin-bottom: 10px;
+}
+
+.detailInfo > h3 {
+    text-align: center;
+}
+
+#search {
+    width: 95%;
+    height: 25px;
+    margin: 10px 0 10px 0;
+}
+
+button {
+    word-break: break-all;
+}
+
+button:hover {
+    background-color: #f1f1f1;
+}
+
+.menuList > div:hover {
+    background-color: #f1f1f1;
+}
+
+.menuList > div {
+    margin: 10px 0 10px 0;
+    cursor: pointer;
+}

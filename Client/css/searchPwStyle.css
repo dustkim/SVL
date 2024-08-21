@@ -1,0 +1,112 @@
+/* 반응형 로고 */
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+h1 {
+  text-align: center;
+  color: #004aad;
+  text-shadow: 3px 5px skyblue;
+}
+h1:hover{
+  cursor: pointer;
+}
+p {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* 입력칸 박스 설정 */
+#box {
+  width: 350px;
+  text-align: center;
+  border: 2px solid #004aad;
+  border-radius: 10px;
+  padding: 30px 10px;
+  margin: 0 auto;
+}
+
+/* 입력칸 박스 내부 설정 */
+#userid {
+  width: 250px;
+  height: 30px;
+  border: 1px solid #004aad;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#username{
+  width: 250px;
+  height: 30px;
+  border: 1px solid #004aad;
+  border-radius: 10px;
+  margin-bottom: 1px;
+  margin-top: 10px;
+}
+
+#useremail{
+  width: 250px;
+  height: 30px;
+  border: 1px solid #004aad;
+  border-radius: 10px;
+  margin-bottom: 1px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#next {
+  width: 320px;
+  height: 40px;
+  color: white;
+  font-size: 10px;
+  border: 1px solid #004aad;
+  border-radius: 10px;
+  background-color: #004aad;
+  margin-bottom: 20px;
+}
+#next:hover {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#moveSearchId {
+  background-color: white;
+  border: 0;
+  color: #004aad;
+}
+#moveSearchId:hover {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
+
+/* title과 input 정렬 */
+.title1{
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 30px;
+}
+
+.title2{
+  clear: both;
+  float: left;
+  margin-left: 10px;
+  margin-right: 23px;
+  margin-top: 10px;
+}
+
+.title3{
+  clear: both;
+  float: left;
+  margin-left: 10px;
+
+}

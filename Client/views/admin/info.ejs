@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>회원 목록</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#example").DataTable();
+      });
+    </script>
+    <style>
+      img {
+        width: 50px;
+        height: 50px;
+        float: left;
+        cursor: pointer;
+      }
+      nav {
+        height: 50px;
+        background-color: white;
+      }
+      #list {
+        background-color: #004aad;
+        color: white;
+      }
+      h1 {
+        text-align: center;
+      }
+      nav {
+        background-color: #004aad;
+        padding-bottom: 5px;
+      }
+      nav > ul {
+        list-style: none;
+        margin: 0;
+        padding: 3px;
+      }
+      nav > ul > button {
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        display: inline-block;
+        margin: 15px 20px;
+        color: white;
+      }
+      nav > ul > form {
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        display: inline-block;
+        margin: 15px 20px;
+        color: blue;
+      }
+      nav > ul > form > button {
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        display: inline-block;
+        color: white;
+      }
+      a:active,
+      a:hover {
+        color: gold;
+        font-weight: bold;
+      }
+      .box {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <img
+            src="../../image/logo.jpg"
+            alt="로고"
+            onclick="location.href='/admin'"
+          />
+          <!-- 수정한 부분 /admin/info => /admin -->
+          <button onclick="location.href='/admin'"><a>회원목록</a></button>
+          <button onclick="location.href='/admin/update'">
+            <a>수정하기</a>
+          </button>
+          <form action="/admin/redirect" method="POST">
+            <button type="submit"><a>로그아웃</a></button>
+          </form>
+        </ul>
+      </nav>
+    </header>
+    <form action="/admin/info" method="post">
+      <div id="content">
+        <h1>회원목록</h1>
+        <div class="info-box">
+          <table
+            id="example"
+            class="table table-striped table-bordered"
+            style="width: 100%"
+          >
+            <thead id="list">
+              <tr>
+                <th>번호</th>
+                <th>회원아이디</th>
+                <th>이름</th>
+                <th>이메일</th>
+                <th>가입일</th>
+                <th>최근 방문 일자</th>
+                <!-- <th>이용현황</th> -->
+              </tr>
+            </thead>
+            <tbody>
+              <!-- MySQL에서 데이터 가져오기 -->
+              <% data.forEach((user, index) => { %>
+              <tr>
+                <td class="box"><%= index + 1 %></td>
+                <td class="box"><%= user.id %></td>
+                <td class="box"><%= user.name %></td>
+                <td class="box"><%= user.email %></td>
+                <td class="box"><%= user.signupDT %></td>
+                <td class="box"><%= user.signinDT %></td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+          <div class="active-users">현재 이용중인 회원 수:</div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

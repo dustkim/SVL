@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <link rel="stylesheet" href="/css/loginStyle.css" />
+  </head>
+  <body>
+    <form action="/user/login" method="post" id="container">
+      <h1>Lingo</h1>
+      <div id="content">
+        <h3>로그인</h3>
+        <div id="box">
+          <div id="login">
+            <div id="userIdIcon">
+              <input
+                type="text"
+                id="userid" name="userid"
+                placeholder="아이디를 입력하세요."
+              />
+            </div>
+            <div id="userPwIcon">
+              <input
+                type="password"
+                id="userpw" name="userpw"
+                placeholder="비밀번호를 입력하세요."
+              />
+            </div>
+          </div>
+          <id id="button">
+            <button type="submit" id="loginBtn">로그인</button><br>
+              <a href="/kakao" id="kakaoLoginBtn">카카오 로그인</a>
+            <button
+              type="button"
+              id="registBtn"
+              onclick="location.href='signup'"
+            >회원가입</button>
+            <button
+              type="button"
+              id="searchIdBtn"
+              onclick="location.href='findid'"
+            >아이디 찾기</button>
+            <button
+              type="button"
+              id="searchPwBtn"
+              onclick="location.href='findpw'"
+            >비밀번호 찾기</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

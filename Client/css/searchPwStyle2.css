@@ -1,0 +1,56 @@
+/* 반응형 로고 */
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+#container {
+  width: 100%;
+  text-align: center;
+}
+h1 {
+  color: #004aad;
+  text-shadow: 3px 5px skyblue;
+}
+
+h3 {
+  font-size: 15px;
+}
+
+#content {
+  width: 300px;
+  border: 2px solid #004aad;
+  margin: 0 auto;
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+
+#rePassword {
+  width: 250px;
+  height: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border: 1px solid #004aad;
+  border-radius: 10px;
+}
+
+#rePasswordCheck {
+  width: 250px;
+  height: 30px;
+  margin-bottom: 20px;
+  border: 1px solid #004aad;
+  border-radius: 10px;
+}
+
+#rePasswordBtn {
+  width: 250px;
+  height: 30px;
+  border: 1px solid #004aad;
+  border-radius: 10px;
+  background-color: #004aad;
+  color: white;
+}
+#rePasswordBtn:hover {
+  font-size: 16px;
+}

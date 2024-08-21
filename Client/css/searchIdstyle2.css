@@ -1,0 +1,63 @@
+@media only screen and (min-width: 768px) {
+  h3 {
+    font-size: 100%;
+  }
+}
+
+#container {
+  width: 100%;
+  text-align: center;
+}
+
+h3 {
+  font-size: 80%;
+}
+
+/* 아이디 확인 박스 */
+#content {
+  width: 350px;
+  height: 300px;
+  margin: 50px auto;
+  border: 2px solid #004aad;
+  border-radius: 10px;
+}
+
+/* 아아디 보여주는 박스 */
+#showId {
+  /* border: 1px solid black; */
+  margin-top: 80px;
+}
+
+#text {
+  font-size: 12px;
+}
+
+/* 하단 버튼 박스 */
+#goPassword {
+  width: 300px;
+  height: 30px;
+  border: 1px solid #004aad;
+  border-radius: 10px;
+  background-color: #004aad;
+  color: white;
+  margin-bottom: 10px;
+}
+#goPassword:hover {
+  font-size: 15px;
+}
+
+#content2 {
+  margin-top: 50px;
+}
+
+#backLogin {
+  width: 300px;
+  height: 30px;
+  border: 1px solid #004aad;
+  border-radius: 10px;
+  background-color: #004aad;
+  color: white;
+}
+#backLogin:hover {
+  font-size: 15px;
+}

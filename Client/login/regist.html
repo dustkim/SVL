@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="/css/registStyle.css" />
+  </head>
+  <body>
+    <!-- 2차 수정한 부분 sendit(event) event를 보내서 js쪽 비동기 함수에서 if문을 처리하기 전에 폼 제출하는 것을 방지한다. -->
+    <form
+      action="/user/signup"
+      method="post"
+      id="joinForm"
+      onsubmit="return sendit(event)"
+    >
+      <h1 onclick="window.location.href='/user/login'">Lingo</h1>
+      <div id="box">
+        <h3 class="title">아이디</h3>
+        <div id="id">
+          <!-- 2차 수정한 부분 placeholder -->
+          <input
+            type="text"
+            id="userId"
+            name="userid"
+            placeholder="4자이상 20자이하 영문자 또는 숫자 포함 입력"
+            required
+          />
+        </div>
+      </div>
+
+      <div id="box">
+        <h3 class="title">비밀번호</h3>
+        <div id="pw">
+          <input
+            type="password"
+            id="userPw"
+            name="userpw"
+            placeholder="4~20자, 영문자, 특수문자, 숫자 포함"
+          />
+        </div>
+      </div>
+
+      <div id="box">
+        <h3 class="title">비밀번호 재확인</h3>
+        <div id="pw-r">
+          <input type="password" id="userPwCheck" name="userpwcheck" />
+        </div>
+      </div>
+
+      <div id="box">
+        <h3 class="title">이름</h3>
+        <div id="name">
+          <input
+            type="text"
+            id="userName"
+            name="username"
+            placeholder="한글로 입력"
+          />
+        </div>
+      </div>
+
+      <div id="box">
+        <h3 class="title">성별</h3>
+        <div id="gender">
+          <select id="userGender" name="gender">
+            <option disabled selected>성별</option>
+            <option value="남자">남자</option>
+            <option value="여자">여자</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="box">
+        <h3 class="title">생년월일</h3>
+        <div id="brthDate">
+          <span id="byear">
+            <select id="year" name="year">
+              <option disabled selected>년도</option>
+            </select>
+          </span>
+
+          <span id="bmonth" class="birth">
+            <select id="month" name="month">
+              <option disabled selected>월</option>
+            </select>
+          </span>
+
+          <span id="bday" class="birth">
+            <select id="day" name="day">
+              <option disabled selected>일</option>
+            </select>
+          </span>
+        </div>
+      </div>
+
+      <div id="box">
+        <h3 class="title">이메일</h3>
+        <div id="email">
+          <input
+            type="text"
+            id="userEmail"
+            name="useremail"
+            placeholder="ex) emali@emali.com"
+          />
+        </div>
+      </div>
+
+      <div id="box">
+        <h3 class="title">휴대전화</h3>
+        <div id="number">
+          <input
+            type="text"
+            id="userNumber"
+            name="usernumber"
+            maxlength="13"
+            placeholder="ex) 000-0000-0000"
+          />
+        </div>
+      </div>
+
+      <div id="box">
+        <h3 class="title">언어선택</h3>
+        <select id="language" name="language">
+          <option disabled selected>언어</option>
+        </select>
+      </div>
+
+      <button type="submit" id="registBtn">가입하기</button>
+    </form>
+    <script src="/js/regist.js"></script>
+  </body>
+</html>

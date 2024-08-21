@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메인페이지</title>
+    <!-- 차트 불러오기 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.js"></script>
+    <style>
+      img {
+        width: 50px;
+        height: 50px;
+        float: left;
+        cursor: pointer;
+      }
+      nav {
+        height: 50px;
+        background-color: #004aad;
+        padding-bottom: 5px;
+      }
+
+      nav > ul {
+        list-style: none;
+        margin: 0;
+        padding: 3px;
+      }
+
+      nav > ul > button {
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        display: inline-block;
+        margin: 15px 20px;
+        color: white;
+      }
+      nav > ul > form{
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        display: inline-block;
+        margin: 15px 20px;
+        color: blue;
+      }
+      nav > ul > form > button {
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        display: inline-block;
+        color: white;
+      }
+
+      a:active,
+      a:hover {
+        color: gold;
+        font-weight: bold;
+      }
+
+      .dashboard-container {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        max-width: 800px;
+        margin: 20px auto;
+      }
+
+      .widget {
+        text-align: center;
+      }
+
+      .widget h2 {
+        margin-bottom: 10px;
+      }
+
+      canvas {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <img
+            src="../../image/logo.jpg"
+            alt="로고"
+            onclick="location.href='/admin'"
+          />
+          <button onclick="location.href='/admin/info'"><a>회원목록</a></button>
+          <button onclick="location.href='/admin/update'"><a>수정하기</a></button>
+          <form action="/admin/redirect" method="POST">
+            <button type="submit"><a>로그아웃</a></button>
+          </form>
+        </ul>
+      </nav>
+    </header>
+    <div class="dashboard-container">
+      <div class="widget">
+        <h2>회원 차트</h2>
+        <canvas id="visitorChart"></canvas>
+      </div>
+    </div>
+    <!-- 차트의 JS적용 -->
+    <script>
+      const ctx = document.getElementById("visitorChart").getContext("2d");
+      const visitorChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          // 가로에 대한 정렬기준
+          labels: [
+            "1월",
+            "2월",
+            "3월",
+            "4월",
+            "5월",
+            "6월",
+            "7월",
+            "8월",
+            "9월",
+            "10월",
+            "11월",
+            "12월",
+          ],
+          datasets: [
+            {
+              label: "월별 방문 수",
+              // 방문자 수에 대한 정보
+              data: [8, 16, 24, 32, 40, 48, 57, 65, 73, 82, 90, 98],
+              borderColor: "blue",
+              backgroundColor: "rgba(54, 162, 235, 0.2)",
+              borderWidth: 2,
+              fill: true, // 선 아래 영역
+              tension: 0.4,
+              pointBackgroundColor: "blue",
+              pointRadius: 5,
+            },
+          ],
+        },
+        // 가로와 세로에 대한 기준 정보
+        options: {
+          responsive: true,
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: "날짜",
+              },
+            },
+            y: {
+              title: {
+                display: true,
+                text: "방문자 수",
+              },
+              beginAtZero: true,
+            },
+          },
+          // 그래프 점 호버 시에 나오는 정보
+          plugins: {
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  return " 방문자 수: " + context.parsed.y + "명";
+                },
+              },
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아이디 확인</title>
+    <link rel="stylesheet" href="/css/searchIdstyle2.css" />
+    <script src="./js/findID.js"></script>
+  </head>
+  <body>
+    <form action="/user/findid/ok" id="container">
+      <div id="content">
+        <h4>아이디를 확인하세요</h4>
+        <div id="showId">
+          <span id="text">사용자님의 아이디: </span>
+          <span id="userId"><%= id %></span>
+        </div>
+        <div id="content2">
+          <button
+            type="button"
+            id="goPassword"
+            onclick="location.href='./findpw'"
+          >
+            비밀번호 찾기
+          </button>
+          <button
+            type="button"
+            id="backLogin"
+            onclick="location.href='./login'"
+          >
+            로그인하러가기
+          </button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

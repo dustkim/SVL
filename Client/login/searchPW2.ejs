@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비밀번호 찾기</title>
+    <link rel="stylesheet" href="/css/searchPwStyle2.css" />
+  </head>
+  <body>
+    <form action="/user/findpw/ok" method="post" id="container">
+      <input type="hidden" name="userid" value="<%= id %>" />
+      <h1>비밀번호 재설정</h1>
+      <div id="content">
+        <h3>재설정할 비밀번호를 입력하세요.</h3>
+        <input
+          type="password"
+          id="rePassword"
+          placeholder="새 비밀번호"
+          name="repassword"
+        />
+        <br />
+        <input
+          type="password"
+          id="rePasswordCheck"
+          placeholder="비밀번호 확인"
+          name="repasswordcheck"
+        />
+        <br />
+        <button type="submit" id="rePasswordBtn">로그인하러가기</button>
+      </div>
+    </form>
+    <script>
+      alert("<%= error %>");
+    </script>
+  </body>
+</html>

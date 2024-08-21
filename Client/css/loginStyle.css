@@ -1,0 +1,147 @@
+/* 반응형 로고 */
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 100px;
+  }
+}
+
+#container {
+  width: 100%;
+  text-align: center;
+}
+
+/* login 박스 */
+#content {
+  text-align: center;
+  width: 350px;
+  height: 350px;
+  border: 2px solid #004aad;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #004aad;
+  text-shadow: 3px 5px skyblue;
+}
+
+h3 {
+  font-size: 30px;
+  margin: 30px auto;
+}
+
+/* login 박스 */
+#login {
+  margin-bottom: 10px;
+}
+
+/* input 테두리 제어 */
+input[type="text"]:focus {
+  outline: none;
+}
+input[type="password"]:focus {
+  outline: none;
+}
+
+/* userid 입력칸 */
+#userIdIcon {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 300px;
+  margin: 0 auto;
+  background-image: url("../image/loginID.png");
+  background-repeat: no-repeat;
+  background-size: 5%;
+  background-position-y: center;
+}
+input[type="text"] {
+  border: 0;
+  width: 250px;
+  height: 50px;
+}
+
+/* userpw 입력칸 */
+#userPwIcon {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 300px;
+  margin: 0 auto;
+  background-image: url("../image/loginPW.png");
+  background-repeat: no-repeat;
+  background-size: 5%;
+  background-position-y: center;
+}
+input[type="password"] {
+  border: 0;
+  width: 250px;
+  height: 50px;
+}
+
+/* button 제어 */
+#loginBtn {
+  width: 300px;
+  height: 40px;
+  background-color: #004aad;
+  color: white;
+  border: 1px solid #004aad;
+  border-radius: 10px;
+}
+#loginBtn:hover {
+  font-size: 16px;
+  font-weight: bold;
+}
+#kakaoLoginBtn {
+  width: 300px;
+  height: 35px;
+  background-color: rgb(250, 225, 0);
+  color: rgb(60, 29, 30);
+  border: 1px solid rgb(250, 225, 0);
+  border-radius: 10px;
+  margin: 1px auto;
+  display: block;
+  line-height: 35px;
+  margin-bottom: 10px;
+  text-decoration-line: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+#kakaoLoginBtn:hover {
+  font-size: 16px;
+  font-weight: bold;
+}
+#registBtn {
+  font-size: 7px;
+  width: 60px;
+  height: 20px;
+  margin-right: 0;
+  border: 0;
+  border-right: 1px solid gray;
+  background-color: white;
+}
+#registBtn:hover {
+  font-size: 8px;
+  font-weight: bold;
+}
+#searchIdBtn {
+  font-size: 7px;
+  width: 60px;
+  height: 20px;
+  border: 0;
+  background-color: white;
+  border-right: 1px solid gray;
+}
+#searchIdBtn:hover {
+  font-size: 8px;
+  font-weight: bold;
+}
+#searchPwBtn {
+  font-size: 7px;
+  width: 65px;
+  height: 20px;
+  border: 0;
+  background-color: white;
+}
+#searchPwBtn:hover {
+  font-size: 8px;
+  font-weight: bold;
+}

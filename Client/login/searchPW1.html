@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비밀번호 찾기</title>
+    <link rel="stylesheet" href="/css/searchPwStyle.css" />
+  </head>
+  <body>
+    <form action="/user/findpw" method="post">
+      <h1 onclick="window.location.href='/user/login'">비밀번호 찾기</h1>
+      <div id="box">
+        <h4>찾으려는 비밀번호의 아이디와 이름, 이메일을 입력하세요.</h4>
+        <h4 class="title1">아이디:</h4>
+        <input
+          type="text"
+          id="userid"
+          name="userid"
+          placeholder="아이디를 입력하세요."
+        />
+        <h4 class="title2">이름:</h4>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="이름을 입력하세요."
+        />
+        <h4 class="title3">이메일:</h4>
+        <input
+          type="text"
+          id="useremail"
+          name="useremail"
+          placeholder="이메일을 입력하세요."
+        />
+        <button type="submit" id="next">비밀번호 찾기</button>
+        <p>
+          아이디가 기억나지 않습니까?
+          <button
+            type="button"
+            id="moveSearchId"
+            onclick="location.href='./findid'"
+          >
+            아이디 찾기
+          </button>
+        </p>
+      </div>
+    </form>
+  </body>
+</html>

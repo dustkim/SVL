@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아이디 찾기</title>
+    <link rel="stylesheet" href="/css/searchIdStyle.css" />
+  </head>
+  <body>
+    <form action="/user/findid" method="post" id="searchIdForm">
+      <h1 onclick="window.location.href='/user/login'">아이디 찾기</h1>
+        <div id="searchIdEmail">
+          <label><input type="radio" name="search" checked/>등록한 이메일로 찾기</label>
+          <h4 class="title1">이름:</h4>
+          <input type="text" id="userNameEmail" name="username" />
+          <h4 class="title2">이메일:</h4>
+          <input type="text" id="userNumberEmail" name="useremail" />
+        </div>
+        <div>
+          <button
+            type="submit"
+            id="searchIDBtn"
+          >
+            아이디 찾기
+          </button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

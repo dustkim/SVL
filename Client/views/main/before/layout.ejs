@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/javascript.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f6d41d7604570ff1ff9b122f2ec7ef00&libraries=services"></script>
+    <title>지도 조회</title>
+</head>
+<body>
+    <div id="container">
+        <div id="sidebar" class="sidebar">
+            <div class="header"> 
+                <div>SVL</div>
+                <input type="text" id="search" placeholder="명칭 검색">
+                <div class="buttonList">
+                    <div class="category"> 
+                        <button id="fo" class="menu">음식점</button>
+                        <button id="lo" class="menu">숙소</button>
+                        <button id="ch" class="menu">문화유산</button>
+                        <button id="pa" class="menu">공원</button>
+                    </div>
+                    <div class="other">
+                        <form action="/user/redirect" method="POST">
+                            <button id="logout" class="logout">로그아웃</button>
+                        </form>
+                        <button id="translate" class="translate">번역</button>
+                        <button id="setting" class="setting">언어</button>
+                        <button id="close" class="close">닫기</button>
+                    </div>
+                </div>
+            </div>
+            <div id="info" class="info">
+                <div id="menuList" class="menuList"></div>
+                <div id="detailInfo" class="detailInfo"></div>
+            </div>
+        </div>
+        <div id="map" class="map"></div>
+        <script>
+          if (!"<%= alert %>") {
+          } else {
+            alert("<%= alert %>");
+          }
+        </script>
+    </div>
+</body>
+</html>

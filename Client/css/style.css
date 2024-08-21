@@ -1,0 +1,368 @@
+:root {
+  --navPc-height: ;
+  --navMobile-height: ;
+  --showIntro-height: 100%;
+  --header-total: ;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.navpc > div:first-child {
+  margin-right: 10px;
+}
+
+.navpc > div:last-child {
+  white-space:nowrap;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+#showIntro {
+  width: 100%;
+  height: calc(var(--showIntro-height) - var(--navPc-height));
+  position: relative;
+}
+
+#logout {
+  margin-left: 20px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.list-group-item {
+  background-color: rgb(170, 177, 184);
+}
+
+#menuList, #translateInfo {
+  overflow: scroll;
+}
+
+#list > li {
+  cursor: pointer;
+}
+
+#menuList {
+  position: absolute;
+  z-index: 300;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  display: none;
+}
+
+#subDetailInfo {
+    height: 100%;
+}
+
+#detailInfo {
+  position: absolute;
+  left: 400px;
+  top: 0;
+  bottom: 0;
+  z-index: 200;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  display: none;
+}
+
+.btn_close {
+  position: absolute;
+  top: 18px;
+  right: -42px;
+  width: 42px;
+  height: 42px;
+  padding: 12px 13px;
+  background-color: #fff;
+  border: 1px solid #888;
+  cursor: pointer;
+}
+
+#translateInfo {
+  position: absolute;
+  z-index: 400;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  display: none;
+}
+
+.translate_btn_close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 42px;
+  height: 42px;
+  padding: 12px 13px;
+  background-color: #fff;
+  border: 1px solid #888;
+  cursor: pointer;
+  z-index: 400;
+}
+
+/* 메뉴 만들 때 별도로 create해서 사용할 것*/
+/* detailInfo > button 생성 */
+.btn_close:before,
+.btn_close:after,
+.translate_btn_close:before,
+.translate_btn_close:after {
+  content: "";
+  width: 50px;
+  height: 1px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 4px;
+  background: #000;
+}
+
+.btn_close:before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.btn_close:after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.translate_btn_close:before{
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.translate_btn_close:after{
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#menuList {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+#menuList::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+#detailInfo {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+#detailInfo::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+#translateInfo {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+#translateInfo::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+/* ----------------------------- */
+
+/* 인포메이션 영역 */
+.area {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #888;
+  border-radius: 3px;
+  font-size: 12px;
+  top: -5px;
+  left: 15px;
+  padding: 2px;
+}
+
+.info {
+  font-size: 12px;
+  padding: 5px;
+  word-break: break-all;
+}
+.info .title {
+  font-weight: bold;
+}
+/* ---------------- */
+
+.wrap {
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  width: 288px;
+  height: 132px;
+  margin-left: -144px;
+  text-align: left;
+  overflow: hidden;
+  font-size: 12px;
+  font-family: "Malgun Gothic", dotum, "돋움", sans-serif;
+  line-height: 1.5;
+}
+.wrap * {
+  padding: 0;
+  margin: 0;
+}
+.wrap .info {
+  width: 286px;
+  height: 120px;
+  border-radius: 5px;
+  border-bottom: 2px solid #ccc;
+  border-right: 1px solid #ccc;
+  overflow: hidden;
+  background: #fff;
+}
+.wrap .info:nth-child(1) {
+  border: 0;
+  box-shadow: 0px 1px 2px #888;
+}
+.info .title {
+  padding: 5px 0 0 10px;
+  height: 30px;
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+  font-size: 18px;
+  font-weight: bold;
+}
+.info {
+  cursor: pointer;
+}
+.info .body {
+  position: relative;
+  overflow: hidden;
+}
+.info .desc {
+  position: relative;
+  margin: 13px 0 0 13px;
+  width: 100px;
+  height: 75px;
+}
+
+.desc .ellipsis {
+  text-overflow: ellipsis;
+  word-wrap:break-word;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #888;
+  width: 17px;
+  height: 17px;
+  background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png");
+}
+
+.info .close:hover {
+  cursor: pointer;
+}
+
+#logoutButton {
+  border: none;
+}
+
+/* pc */
+@media (min-width: 992px){
+  #nav_logout {
+    display: none;
+  }
+
+  .navtitle {
+    display: none;
+  }
+
+  #navpc {
+      display: flex !important;
+  }
+
+  #navMobile {
+      display: none !important;
+  }
+}
+
+/* mobile */
+@media (max-width: 991px){
+
+  #container{
+    position: fixed;
+  }
+
+  #showIntro {
+    height: calc(var(--showIntro-height) - var(--header-total));
+  }
+
+  #logout {
+    display: none;
+  }
+
+  #subDetailInfo {
+    height: auto;
+  }
+
+  #menuList {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    margin: 0px !important;
+  }
+
+  #detailInfo {
+    left: 0;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    overflow: scroll;
+    z-index: 400;
+  }
+
+  #detailInfo > div:first-child {
+    margin: 0px !important;
+  }
+
+  .btn_close {
+    right: 0;
+    top: 0;
+  }
+
+  #translateInfo {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    margin: 0px !important;
+  }
+
+  #navpc {
+    display: none !important;
+  }
+
+  #navMobile {
+    display: flex !important;
+  }
+
+  .mobile {
+    align-items: center;
+    width: 100%;
+  }
+
+  .mobile > div:first-child {
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  .mobile > div:last-child {
+    white-space:nowrap;
+  }
+}

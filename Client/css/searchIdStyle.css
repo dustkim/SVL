@@ -1,0 +1,79 @@
+/* 반응형 로고 */
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+#searchIdForm {
+  text-align: center;
+}
+
+h1 {
+  color: #004aad;
+  text-shadow: 3px 5px skyblue;
+}
+h1:hover{
+  cursor: pointer;
+}
+
+/* 입력칸 박스 설정 */
+#searchIdEmail {
+  width: 300px;
+  border: 2px solid #004aad;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#userNameEmail {
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid #004aad;
+  margin-top: 20px;
+}
+
+#userNumberEmail {
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid #004aad;
+  margin-top: 30px;
+}
+
+/* 입력칸 옆으로 옮기기 */
+.title1 {
+  margin-top: 45px;
+  float: left;
+  margin-right: 30px;
+}
+
+.title2 {
+  margin-top: 25px;
+  clear: both;
+  float: left;
+}
+
+/* 아이디 찾기 버튼 밑으로 내리기 */
+#searchIdEmail {
+  margin-bottom: 30px;
+}
+
+/* 전화번호로 찾기 박스 */
+#searchIdNmber {
+  margin-bottom: 50px;
+}
+
+/* 아이디 찾기 버튼 */
+#searchIDBtn {
+  width: 300px;
+  height: 40px;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  background-color: #004aad;
+}
+#searchIDBtn:hover {
+  font-size: 15px;
+  font-weight: bold;
+}
