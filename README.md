@@ -1,8 +1,7 @@
 # 🗺️서울 다국어 지도
 <img width="100%" alt="image" src="https://github.com/user-attachments/assets/f94f0eee-29b3-415f-a618-3025894d2ae5">
 
-##### 서울의 중심 중구를 바탕으로 카테고리 추천(feat. 번역 시스템)
-
+#### 서울의 중심 중구를 바탕으로 카테고리 추천(feat. 번역 시스템)
 ##### 인원: 5명
 ##### 기간: 24.04.08~24.05.30
 
@@ -31,7 +30,7 @@ AI를 통해 산재 가능성을 판단하고 사용자의 상황과 유사한 �
 <br>
 
 --------------------
-## ⚙️ Skills & Tools
+### ⚙️ Skills & Tools
 Backend: <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white"/></t>
 </br>
 Frontend: <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/>
@@ -67,14 +66,16 @@ Frontend: <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&l
 <br>
 <br>
 
-## 📌 맡은 일
-- 프론트
-  - 피그마로 기본적인 페이지 구현
-  - 사이드 바 구현
-  - 관리자 페이지 구현
-- PPT
-  - PPT 전체적인 디자인
-  - IA 제작
+## 📌 Process & Role
+#### Overall Process
+###### - 기획(함께), 디자인, 백엔드, 프론트엔트, PPT 발표, 배포
+#### 😊 My Role
+######   - 로그인 페이지 구현(+ 카카오 로그인)
+######   - 관리자 페이지 구현
+######   - 백엔드 연결
+######   - DB 설정 및 연결(MySQL)
+######   - PPT 제작
+######   - AI 제작
 
 <br>
 
