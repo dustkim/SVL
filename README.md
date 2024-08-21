@@ -5,37 +5,31 @@
 ##### 인원: 5명
 ##### 기간: 24.04.08~24.05.30
 
-## 💼 주요 기능 소개
+## 🔥 주요 기능 소개
 
-### 📑 기존 판례문 검색
-기존에 판결된 판례문을 직접 검색하여 확인할 수 잇는 기능을 제공합니다.
-각 유형에 맞는 판결문을 따로 검색할 수도록 구성하였습니다.
+### 🌎 다국어 번역
+**SVL**은 다국어 번역 기능을 제공합니다.
+지도에서 선택한 음식점, 숙소 등의 상세 내용을 다양한 언어로 번역할 수 있도록 구성하였습니다.
 
-### ⁉️ AI를 통한 산재 가능성 판단
-**sanjae.gg**는 AI를 사용하여 산재 가능성을 판단하는 기능을 제공합니다.
-사용자가 입력한 상황에 맞는 판례문을 확인하고, 산재 가능성을 판단하도록 만들었습니다.
+### 📍 특정 지역 선택
+**SVL**은 특정 지역 선택 기능을 제공합니다.
+지도에서 서울의 각 구들이 Polygon으로 나뉘어져 있어, 쉽게 원하는 지역을 선택할 수 있도록 <br>구성하였습니다.
 
-### 📋 금액 산정
-**sanjae.gg**는 금액 계산 기능을 제공합니다.
-AI를 통해 산재 가능성을 판단하고 그에 맞는 금액을 계산할 수 있도록 구성했습니다.
-
-### 📋 노무사 추천
-**sanjae.gg**는 노무사 추천 기능을 제공합니다.
-AI를 통해 산재 가능성을 판단하고 그에 맞는 노무사를 추천할 수 있도록 구성하였습니다.
-
-### 📋 유사한 판례
-**sanjae.store**는 유사한 판례 확인 기능을 제공합니다.
-AI를 통해 산재 가능성을 판단하고 사용자의 상황과 유사한 판례를 확인할 수 있도록 구성하였습니다.
+### 🧩 다양한 메뉴 제공
+**SVL**은 다양한 메뉴를 제공합니다.
+음식점, 숙소, 문화유산 등 외국인이 서울에서 찾을만한 메뉴들을 제공받을 수 있도록 구성하였습니다.
 
 <br>
 
 --------------------
 ### ⚙️ Skills & Tools
-Backend: <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white"/></t>
+  <img src="https://img.shields.io/badge/Html5-E34F26?style=flat&logo=Html5&logoColor=white" />&nbsp;
+  <img src="https://img.shields.io/badge/Css3-1572B6?style=flat&logo=Css3&logoColor=white" />&nbsp;
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white" />&nbsp;
 </br>
-Frontend: <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/>
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/>
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Node.js-5FA04E?style=flat&logo=Node.js&logoColor=white" />&nbsp;
+  <img src="https://img.shields.io/badge/MySQL-4479A1.svg?style=flat&logo=MySQL&logoColor=white" />&nbsp;
+  <img src="https://img.shields.io/badge/VScode-0854C1.svg?style=flat&logo=VScode&logoColor=white" />&nbsp;
 
 --------------------
 
